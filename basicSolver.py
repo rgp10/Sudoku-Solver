@@ -16,7 +16,6 @@ grid = [[3, 0, 0, 4, 9, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 2, 5, 0],
         [0, 0, 0, 0, 1, 2, 0, 0, 3]]
 
-
 # A function to check if there are any remaining empty squares
 def checkGridFull(grid):
     # loop through each row and column, checking for empty squares
@@ -49,7 +48,7 @@ def usedInSubsquare(value, row, col, grid):
     rowMin = row // 3 * 3
     colMin = col // 3 * 3
     for r, c in product(range(0, 3), range(0, 3)):
-        if grid[rowMin+r][colMin+r] == value:
+        if grid[rowMin+r][colMin+c] == value:
             return True
     return False
 
